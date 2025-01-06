@@ -12,6 +12,6 @@ export const popupToBackgroundFunction = (
     message: Message<ProtocolMap, "popup-to-background"> & ExtensionMessage
 ) => {
     console.log("popup-to-background received", message);
-    sendMessage("test-message", { in: { message: "Hello from popup" } })
+    sendMessage("test-message", { in: { message: "Hello from popup" }, out: { success: true } })
 }
 

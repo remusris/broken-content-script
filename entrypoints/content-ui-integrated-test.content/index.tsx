@@ -24,7 +24,7 @@ export default defineContentScript({
       },
     });
 
-    onMessage("test-message", testMessageFunction)
+    // onMessage("test-message", testMessageFunction)
 
     // Call mount to add the UI to the DOM
     ui.mount();

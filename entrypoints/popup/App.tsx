@@ -26,9 +26,9 @@ function App() {
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
       </div>
-      <p className="read-the-docs" style={{ cursor: 'pointer' }} onClick={() => sendMessage("popup-to-background", { in: { open: true }, out: { success: false } })}>
-        Click on the WXT and React logos to learn more
-      </p>
+      <button onClick={() => sendMessage("popup-to-background", { in: { open: true }, out: { success: false } })}>
+        Send message to background - then send message to content
+      </button>
     </>
   );
 }

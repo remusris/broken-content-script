@@ -4,9 +4,15 @@ import { onMessage } from '@/messaging/send-message';
 
 const App = () => {
 
-    /* useEffect(() => {
-        onMessage("test-message", testMessageFunction)
-    }, []) */
+    useEffect(() => {
+        // Set up message listener
+        const unsubscribe = onMessage('test-message', testMessageFunction);
+
+        // Cleanup listener on component unmount
+        return () => {
+            unsubscribe();
+        };
+    }, []);
 
     return (
         <div
